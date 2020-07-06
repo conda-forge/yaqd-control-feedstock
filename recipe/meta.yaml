@@ -18,13 +18,20 @@ build:
 
 requirements:
   host:
+    - appdirs
+    - click
+    - colorama
+    - yaqc
+    - prettytable
     - python >=3.7
+    - toml
     - pip
+    - flick
   run:
     - appdirs
     - click
     - colorama
-    - msgpack-python >=1.0.0
+    - yaqc
     - prettytable
     - python >=3.7
     - toml
