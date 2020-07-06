@@ -1,5 +1,5 @@
-{% set name = "yaqd-control" %}
-{% set version = "2020.5.0" %}
+{% set name = "yaqd_control" %}
+{% set version = "2020.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7158190c829ed957cd4cd4156d843cf36971f02518bb8712c00867ed0a0ba12b
+  sha256: ca61327a2cfb24a038bb297b212d0769439f43ace3cd203dcc593fa376ba40fc
 
 build:
   noarch: python
@@ -18,13 +18,20 @@ build:
 
 requirements:
   host:
+    - appdirs
+    - click
+    - colorama
+    - yaqc
+    - prettytable
     - python >=3.7
+    - toml
     - pip
+    - flit
   run:
     - appdirs
     - click
     - colorama
-    - msgpack-python >=1.0.0
+    - yaqc
     - prettytable
     - python >=3.7
     - toml
