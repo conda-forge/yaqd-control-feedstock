@@ -1,13 +1,13 @@
 {% set name = "yaqd_control" %}
-{% set version = "2020.7.0" %}
+{% set version = "2020.7.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ca61327a2cfb24a038bb297b212d0769439f43ace3cd203dcc593fa376ba40fc
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('_', '-') }}-{{ version }}.tar.gz
+  sha256: cce371ca469ada355df8a52c634b80604774f4e8cda4039b4dfe1b9ba41ec984
 
 build:
   noarch: python
