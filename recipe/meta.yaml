@@ -1,4 +1,4 @@
-{% set name = "yaqd_control" %}
+{% set name = "yaqd-control" %}
 {% set version = "2020.7.1" %}
 
 package:
