@@ -1,5 +1,5 @@
 {% set name = "yaqd-control" %}
-{% set version = "2020.7.1" %}
+{% set version = "2020.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('_', '-') }}-{{ version }}.tar.gz
-  sha256: cce371ca469ada355df8a52c634b80604774f4e8cda4039b4dfe1b9ba41ec984
+  sha256: 230a4a5c508d3c63937cc62b741d8424d14bb4a99c2ebe192acc26cc890ab046
 
 build:
   noarch: python
-  number: 1
+  number: 0
   entry_points:
     - yaqd=yaqd_control.__main__:main
   script: {{ PYTHON }} -m pip install . -vv
@@ -22,7 +22,7 @@ requirements:
     - click
     - colorama
     - yaqc
-    - prettytable
+    - prettytable !=1.0.0
     - python >=3.7
     - toml
     - pip
@@ -32,7 +32,7 @@ requirements:
     - click
     - colorama
     - yaqc
-    - prettytable
+    - prettytable !=1.0.0
     - python >=3.7
     - toml
 
