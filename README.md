@@ -5,11 +5,13 @@ Home: https://yaq.fyi
 
 Package license: LGPL-3.0-only
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/yaqd-control-feedstock/blob/master/LICENSE.txt)
 
 Summary: Command line tools for inspecting and controlling yaq daemons.
 
+Development: https://gitlab.com/yaq/yaqd-control
 
+Documentation: https://yaq.fyi
 
 Current build status
 ====================
