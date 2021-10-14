@@ -20,20 +20,20 @@ requirements:
   host:
     - appdirs
     - click
-    - colorama
     - yaqc
     - prettytable !=1.0.0
     - python >=3.7
+    - rich
     - toml
     - pip
     - flit
   run:
     - appdirs
     - click
-    - colorama
     - yaqc
     - prettytable !=1.0.0
     - python >=3.7
+    - rich
     - toml
 
 test:
