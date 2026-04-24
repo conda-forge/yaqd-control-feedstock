@@ -6,12 +6,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('_', '-') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('_', '-') }}-{{ version }}.tar.gz
   sha256: 62d9c0d99338384eee74caadf9a87f644d996057440cf6c156ab70a4ce6cb9b1
 
 build:
   noarch: python
-  number: 0
+  number: 1
   entry_points:
     - yaqd=yaqd_control.__main__:main
   script: {{ PYTHON }} -m pip install . -vv
@@ -22,7 +22,7 @@ requirements:
     - click
     - yaqc
     - prettytable !=1.0.0
-    - python >=3.7
+    - python {{ python_min }}
     - rich
     - toml
     - pip
@@ -32,11 +32,13 @@ requirements:
     - click
     - yaqc
     - prettytable !=1.0.0
-    - python >=3.7
+    - python >={{ python_min }}
     - rich
     - toml
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - yaqd_control
   commands:
