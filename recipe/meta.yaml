@@ -1,5 +1,5 @@
 {% set name = "yaqd-control" %}
-{% set version = "2022.4.0" %}
+{% set version = "2026.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('_', '-') }}-{{ version }}.tar.gz
-  sha256: 62d9c0d99338384eee74caadf9a87f644d996057440cf6c156ab70a4ce6cb9b1
+  sha256: 4ba1e56c81d3379859ca69eab64b97368183071d40d544ceaf46652fe8cc8a7a
 
 build:
   noarch: python
@@ -57,3 +57,4 @@ extra:
   recipe-maintainers:
     - untzag
     - ksunden
+    - ddkohler
