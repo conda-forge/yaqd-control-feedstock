@@ -26,7 +26,7 @@ requirements:
     - rich
     - toml
     - pip
-    - flit
+    - hatch
   run:
     - appdirs
     - click
