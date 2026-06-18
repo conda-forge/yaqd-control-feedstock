@@ -1,17 +1,17 @@
 {% set name = "yaqd-control" %}
-{% set version = "2022.4.0" %}
+{% set version = "2026.6.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('_', '-') }}-{{ version }}.tar.gz
-  sha256: 62d9c0d99338384eee74caadf9a87f644d996057440cf6c156ab70a4ce6cb9b1
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 4ba1e56c81d3379859ca69eab64b97368183071d40d544ceaf46652fe8cc8a7a
 
 build:
   noarch: python
-  number: 1
+  number: 0
   entry_points:
     - yaqd=yaqd_control.__main__:main
   script: {{ PYTHON }} -m pip install . -vv
@@ -22,16 +22,18 @@ requirements:
     - click
     - yaqc
     - prettytable !=1.0.0
+    - platformdirs
     - python {{ python_min }}
     - rich
     - toml
     - pip
-    - flit
+    - hatch
   run:
     - appdirs
     - click
     - yaqc
     - prettytable !=1.0.0
+    - platformdirs
     - python >={{ python_min }}
     - rich
     - toml
@@ -57,3 +59,4 @@ extra:
   recipe-maintainers:
     - untzag
     - ksunden
+    - ddkohler
