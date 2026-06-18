@@ -22,6 +22,7 @@ requirements:
     - click
     - yaqc
     - prettytable !=1.0.0
+    - platformdirs
     - python {{ python_min }}
     - rich
     - toml
@@ -32,6 +33,7 @@ requirements:
     - click
     - yaqc
     - prettytable !=1.0.0
+    - platformdirs
     - python >={{ python_min }}
     - rich
     - toml
